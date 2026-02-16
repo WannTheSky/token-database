@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Access Panel</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="box">
+<h1>Bot Database Access</h1>
+<p>Enter Access Code</p>
+
+<input id="accessCode" placeholder="Access Code">
+<button onclick="checkAccess()">Enter</button>
+
+<div id="result" class="result"></div>
+</div>
+
+<script>
+function checkAccess(){
+  const code = document.getElementById('accessCode').value;
+  if(code === "WannTheSky"){
+    window.location.href = "/panel.html";
+  }else{
+    document.getElementById('result').innerText = "ACCESS DENIED";
+  }
+}
+</script>
+</body>
+</html>
